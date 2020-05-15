@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MutablePropertySources;
@@ -23,6 +24,16 @@ public class MainClass {
 		e.printStackTrace();
 	}
 	
+	GenericXmlApplicationContext ctx2=(GenericXmlApplicationContext)ctx;
+	
+	ctx2.load("classpath:appCTX.xml");
+	ctx2.refresh();
+	
+	AdminConnection adminConnection=ctx2.getBean("adminConnection",AdminConnection.class);
+	System.out.println("ID:"+adminConnection.getAdminId());
+	System.out.println("PW:"+adminConnection.getAdminPw());
+	
+	ctx2.close();
 }
 	
 }
