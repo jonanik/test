@@ -21,7 +21,7 @@ public class MainClass {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+//dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 		GenericXmlApplicationContext ctx2=(GenericXmlApplicationContext) ctx;
 		ctx2.load("appCTX.xml");
 		ctx2.refresh();
