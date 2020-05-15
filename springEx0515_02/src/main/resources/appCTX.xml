@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="memberAll" class="com.javalec.ex.MemberAll">
+		<constructor-arg>
+			<list>
+				<ref bean="member1" />
+				<ref bean="member2" />
+				<ref bean="member3" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="member1" class="com.javalec.ex.Member">
+		<constructor-arg value="1001" />
+		<constructor-arg value="홍길동" />
+		<constructor-arg value="30" />
+		<constructor-arg value="010-1111-1111" />
+		<constructor-arg value="서울" />
+	</bean>
+	<bean id="member2" class="com.javalec.ex.Member">
+		<constructor-arg value="1002" />
+		<constructor-arg value="유관순" />
+		<constructor-arg value="33" />
+		<constructor-arg value="010-2222-2222" />
+		<constructor-arg value="경기" />
+	</bean>
+	<bean id="member3" class="com.javalec.ex.Member">
+		<constructor-arg value="1003" />
+		<constructor-arg value="김유신" />
+		<constructor-arg value="35" />
+		<constructor-arg value="010-3333-3333" />
+		<constructor-arg value="부산" />
+	</bean>
+
+	<bean id="medicalRecord1" class="com.javalec.ex.MedicalRecord">
+		<constructor-arg value="1001" />
+		<constructor-arg value="2020-5-13" />
+		<constructor-arg value="닥터박" />
+		<constructor-arg value="김간호사" />
+		<constructor-arg value="코로나" />
+		<constructor-arg value="2020-5-20" />
+	</bean>
+	<bean id="medicalRecord2" class="com.javalec.ex.MedicalRecord">
+		<constructor-arg value="1002" />
+		<constructor-arg value="2020-3-18" />
+		<constructor-arg value="닥터김" />
+		<constructor-arg value="최간호사" />
+		<constructor-arg value="콜오나" />
+		<constructor-arg value="2020-4-22" />
+	</bean>
+
+</beans>
