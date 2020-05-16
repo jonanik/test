@@ -20,7 +20,7 @@ public class MainClass {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}//kkkkkkk
 //dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 		GenericXmlApplicationContext ctx2=(GenericXmlApplicationContext) ctx;
 		ctx2.load("appCTX.xml");
